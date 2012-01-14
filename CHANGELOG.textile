@@ -7,3 +7,4 @@ h2. 0.1.0
 h2. 0.2.0
 
 * Started to implement a role based access control model.
+* Implemented permission/visibility ineritance.

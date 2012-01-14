@@ -8,6 +8,7 @@ h2. Features
 
 * Deeply nestable
 * You can have menus and entries mixed on every level.
+* Simple role based access control with permission inheritance that can be optionally switched of (see @rbac_spec.rb@ for details.)
 
 h2. Test
 
@@ -23,3 +24,7 @@ h2. Roadmap - The BIG P I C T U R E
 * The data model will be enhanced with information to later support authorization and visibility decisions.
 * Internationalization will also be prepared.
 * Then the problem of rendering menus will be targeted. This might become a framework specific renderer and thus end up in a separate repository but is surely part of the big picture.
+
+h2. Usage
+
+bc. 
