@@ -55,7 +55,7 @@ describe VeryNiceMenu::Rbac do
       menu.allowed_for?(:everyone).should be_false      
     end
     
-    it "should build a menu and inherit visibility" do
+    it "should build a menu being partly public and partly private" do
       menu = VeryNiceMenu.build('Public Menu')    
     
       menu.submenu("Public Submenu 1") do |submenu|        
