@@ -1,7 +1,13 @@
 h1. Very Nice Menu
 
 This is a Ruby lib to create a tree of menus. Very nice. Really!
+
 BTW this document is written with a certain portion of humor (insanity).
+
+h2. Features
+
+* Deeply nestable
+* You can have menus and entries mixed on every level.
 
 h2. Test
 
@@ -10,3 +16,10 @@ Before your dirty hands touch a single line of code be sure to run the tests by 
 bc. rspec
 
 Otherwise we'll find and punish you! Promised.
+
+h2. Roadmap - The BIG P I C T U R E
+
+* First versions are about building a valid data structure needed to create menus.
+* The data model will be enhanced with information to later support authorization and visibility decisions.
+* Internationalization will also be prepared.
+* Then the problem of rendering menus will be targeted. This might become a framework specific renderer and thus end up in a separate repository but is surely part of the big picture.
