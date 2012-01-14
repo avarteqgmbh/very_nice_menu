@@ -107,8 +107,6 @@ describe VeryNiceMenu::Rbac do
       entry.allowed_for?(:admin).should be_true
       entry.allowed_for?(:everyone).should be_true
       entry.allowed_for?(:somebody).should be_true     
-    end
-    
-    
+    end    
   end
 end
