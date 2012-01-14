@@ -1,0 +1,12 @@
+h1. Very Nice Menu
+
+This is a Ruby lib to create a tree of menus. Very nice. Really!
+BTW this document is written with a certain portion of humor (insanity).
+
+h2. Test
+
+Before your dirty hands touch a single line of code be sure to run the tests by invoking
+
+bc. rspec
+
+Otherwise we'll find and punish you! Promised.
