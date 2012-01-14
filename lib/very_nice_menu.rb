@@ -1,4 +1,5 @@
 require "very_nice_menu/version"
+require "very_nice_menu/rbac"
 require "very_nice_menu/menu"
 require "very_nice_menu/entry"
 

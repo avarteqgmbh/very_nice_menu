@@ -2,4 +2,8 @@ h1. Changelog
 
 h2. 0.1.0
 
-* Basic tree structure established
+* Basic tree structure established.
+
+h2. 0.2.0
+
+* Started to implement a role based access control model.

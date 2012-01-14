@@ -1,5 +1,8 @@
 module VeryNiceMenu
   class Menu
+    
+    include VeryNiceMenu::Rbac
+    
     attr_accessor :name, :options
     attr_accessor :submenus, :entries
     attr_accessor :parent
@@ -20,6 +23,6 @@ module VeryNiceMenu
     
     def entry(name, options = {})
       @entries << VeryNiceMenu::Entry.new(name, options, self)
-    end
+    end    
   end
 end
