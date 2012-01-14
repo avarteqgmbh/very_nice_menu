@@ -86,7 +86,7 @@ describe VeryNiceMenu::Menu do
   
   context "Bottom up traversal" do
     it "should be possible to find the parent menu of a submenu" do
-      menu    = main_menu = VeryNiceMenu.build('Main Menu')    
+      menu = VeryNiceMenu.build('Main Menu')    
       
       menu.submenu("Main Menu - Submenu 1") do |submenu|        
         submenu.entry("My Entry")
@@ -96,7 +96,7 @@ describe VeryNiceMenu::Menu do
     end
     
     it "should be possible to find the parent menu of a certain entry" do
-      menu    = main_menu = VeryNiceMenu.build('Main Menu')    
+      menu = VeryNiceMenu.build('Main Menu')    
       
       menu.submenu("Main Menu - Submenu 1") do |submenu|        
         submenu.entry("My Entry")
