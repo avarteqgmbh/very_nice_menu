@@ -55,6 +55,35 @@ describe VeryNiceMenu::Rbac do
       menu.allowed_for?(:everyone).should be_false      
     end
     
+    it "should build a menu and inherit visibility" do
+      menu = VeryNiceMenu.build('Public Menu')    
+    
+      menu.submenu("Public Submenu 1") do |submenu|        
+        submenu.entry("My Entry")
+      end
+      
+      menu.submenu("Private Submenu 2", :allowed_for => [:admin]) do |submenu|
+        submenu.entry("My private Entry")
+      end
+    
+      submenu         = menu.submenus[0]
+      private_submenu = menu.submenus[1]
+      entry           = submenu.entries.first
+      private_entry   = private_submenu.entries.first
+    
+      menu.allowed_for?(:somebody).should be_true
+ 
+      submenu.allowed_for?(:somebody).should be_true
+      
+      private_submenu.allowed_for?(:somebody).should be_false          
+      
+      entry.allowed_for?(:admin).should be_true
+      entry.allowed_for?(:somebody).should be_true
+
+      private_entry.allowed_for?(:admin).should be_true
+      private_entry.allowed_for?(:somebody).should be_false
+    end
+    
     it "should build a menu and NOT inherit visibility" do
       menu = VeryNiceMenu.build('Main Menu', :allowed_for => [:admin], :inherit_permissions => false)    
     
@@ -79,5 +108,7 @@ describe VeryNiceMenu::Rbac do
       entry.allowed_for?(:everyone).should be_true
       entry.allowed_for?(:somebody).should be_true     
     end
+    
+    
   end
 end
