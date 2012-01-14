@@ -27,4 +27,26 @@ h2. Roadmap - The BIG P I C T U R E
 
 h2. Usage
 
-bc. 
+	menu = VeryNiceMenu.build('Main Menu', :allowed_for => [:admin])    
+	menu.submenu("Main Menu - Submenu 1") do |submenu|        
+		submenu.entry("My Entry")
+	end
+	
+	submenu = menu.submenus.first
+  entry   = submenu.entries.first
+
+  menu.allowed_for?(:admin)
+  => true
+  menu.allowed_for?(:everyone)
+  => false
+
+  submenu.allowed_for?(:admin)
+  => true
+  submenu.allowed_for?(:everyone)
+  => false
+
+  entry.allowed_for?(:admin)
+  => true
+
+  entry.allowed_for?(:everyone)
+  => false
