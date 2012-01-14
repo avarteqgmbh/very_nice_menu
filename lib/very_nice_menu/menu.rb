@@ -1,10 +1,10 @@
 module VeryNiceMenu
   class Menu
     attr_accessor :name, :options
-    attr_reader   :submenus       
+    attr_accessor :submenus       
     attr_reader   :entries
         
-    def initialize(name, options = {})
+    def initialize(name = "", options = {})
       @name     = name
       @options  = options
       @submenus = []
